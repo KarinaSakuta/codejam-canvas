@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Canvas Epam Task">
+    <meta name="keywords" content="Canvas">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Canvas</title>
+    <link rel="shortcut icon" href="assets/img/pipette.svg" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="src/css/vendors/reset.css"> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__hamburger">
+      <button class="header__hamburger-but" id="hamburger-but"></button>
+      <h1 class="header__hamburger-title">CodeJam - Pallete</h1>
+      </div>
+      <button class="header__dots" id="dots"></button>
+    </header>
+    <main class="main">
+      <div class="main__workspace">
+        <div class="main__workspace-container">
+          <div class="main__workspace-panel">
+            <ul class="main__workspace-panel-instruments">
+              <li class="main__workspace-panel-instruments-item-first">
+                <img class="main__workspace-panel-instruments-icon" src="assets/img/fill.svg" height="24" width="24" alt="icon">
+                <p class="main__workspace-panel-instruments-text">Paint bucket</p>
+              </li>
+              <li class="main__workspace-panel-instruments-item-first">
+                <img class="main__workspace-panel-instruments-icon" src="assets/img/pipette.svg" height="24" width="24" alt="icon">
+                <p class="main__workspace-panel-instruments-text">Choose color</p>
+              </li>
+            </ul>
+            <ul class="main__workspace-panel-instruments">
+              <li class="main__workspace-panel-instruments-item-second">
+                <img class="main__workspace-panel-instruments-icon" src="assets/img/move.svg" height="24" width="24" alt="icon">
+                <p class="main__workspace-panel-instruments-text">Move</p>
+              </li>
+              <li class="main__workspace-panel-instruments-item-second">
+                <img class="main__workspace-panel-instruments-icon" src="assets/img/transform.svg" height="24" width="24" alt="icon">
+                <p class="main__workspace-panel-instruments-text">Transform</p>
+              </li>
+            </ul>
+          </div>
+          <div class="main__workspace-panel">
+            <ul class="main__workspace-panel-colors">
+              <li class="main__workspace-panel-colors-item">
+                <p class="main__workspace-panel-colors-text">
+                  <svg class="main__workspace-panel-colors-icon" width="22" height="22">
+                    <circle cx="11" cy="11" r="10" stroke="black" stroke-width="1" fill="#C4C4C4" />
+                  </svg>
+                  Current color
+                </p>
+              </li>
+              <li class="main__workspace-panel-colors-item">
+                <p class="main__workspace-panel-colors-text">
+                  <svg class="main__workspace-panel-colors-icon" width="22" height="22">
+                    <circle cx="11" cy="11" r="10" stroke="black" stroke-width="1" fill="#41F795" />
+                  </svg>
+                  Prev color
+                </p>
+              </li>
+            </ul>
+            <ul class="main__workspace-panel-colors">
+              <li class="main__workspace-panel-colors-item">
+                <p class="main__workspace-panel-colors-text">
+                  <svg class="main__workspace-panel-colors-icon" width="22" height="22">
+                    <circle cx="11" cy="11" r="10" stroke="black" stroke-width="1" fill="#F74141" />
+                  </svg>
+                  red
+                </p>
+              </li>
+              <li class="main__workspace-panel-colors-item">
+                <p class="main__workspace-panel-colors-text">
+                  <svg class="main__workspace-panel-colors-icon" width="22" height="22">
+                    <circle cx="11" cy="11" r="10" stroke="black" stroke-width="1" fill="#41B6F7" />
+                  </svg>
+                  blue
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main__workspace-container">
+            <div class="main__workspace-panel main__workspace-panel_checkbox">
+              <div class="main__workspace-panel-btn-group">
+                <input type='checkbox' class='main__workspace-panel__btn-picture' data-index="0" name="size"><p class="main__workspace-panel-btn-text">4x4</p>
+              </div>
+              <div class="main__workspace-panel-btn-group">
+                <input type='checkbox' class='main__workspace-panel__btn-picture' data-index="1" name="size"><p class="main__workspace-panel-btn-text">32x32</p>
+              </div>
+              <div class="main__workspace-panel-btn-group">
+                <input type='checkbox' class='main__workspace-panel__btn-picture' data-index="2" name="size"><p class="main__workspace-panel-btn-text">256x256</p>
+              </div>
+            </div>
+        </div>
+        <canvas class="main__workspace-canvas" id="c1" width="512" height="512"></canvas>
+      </div>
+    </main>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
